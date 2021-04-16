@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Padauk";
+    src: url("fonts/Padauk/Padauk-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Padauk', sans-serif;
+}
+
+.table td, 
+.table th {
+    white-space: nowrap;
+    width: 1%;
+}
+
+th a { cursor: pointer; }
+h1 button { float: right; }
+.user-list-enter, .user-list-leave-active {
+  display: none;
+}
+.user-list-move {
+  transition: transform .5s;
+}
+
+.btn {
+    border-radius: 0;
+}

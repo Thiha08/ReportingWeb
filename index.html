@@ -7,18 +7,54 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&display=swap">
+
 
     <!-- production version, optimized for size and speed -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet"> -->
 
     <link rel="stylesheet" href="site.css"></link>
-    <title>Hello, world!</title>
+    
+    <title>Users</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-
-    <div id="app">
-        {{ message }}
+    <div id="app" class="container-fluid mt-5">
+      <input v-model="filterQuery" placeholder="Filter users" class="form-control">
+      <table id="usertable" v-if="filteredUsers.length" class="table table-bordered table-responsive mt-3">
+        <thead>
+          <tr>
+            <th v-for="column in tableColumns" scope="col">
+              <a @click="orderByField = column.field">
+                {{ column.title }}
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <tbody is="transition-group" name="user-list">
+          <tr v-for="user in filteredUsers" :key="user.id">
+            <td v-for="column in tableColumns">
+              {{ getField(user, column.field) }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p v-if="statusMessage" class="well">
+        {{ statusMessage }}
+      </p>
+      <div class="row">
+        <div class="col-lg-12">
+          <button type="button" class="btn btn-outline-primary" @click="downloadExcel">Download Excel</button>
+          <button type="button" class="btn btn-outline-secondary" @click="downloadCSV">Download CSV</button>
+          <button type="button" class="btn btn-outline-success" @click="downloadPDF">Download PDF</button>
+    
+          <button v-if="users.length" @click="fetchUsers" class="btn btn-outline-danger float-right">
+            <span class="glyphicon glyphicon-refresh"></span>
+            Call API Again
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -27,13 +63,26 @@
     <script src="popper/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="vue/vue.js"></script>
+    <script src="lodash/lodash.min.js"></script>
+    <script src="moment/moment.min.js"></script>
+    <script src="jspdf/jspdf.min.js"></script>
+    <script src="jspdf/jspdf.plugin.autotable.min.js"></script>
     
     <!-- production version, optimized for size and speed -->
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+    <!-- 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+   -->
     
+    <script src="jspdf/padauk_base64.js"></script>
+
     <script src="site.js"></script>
   </body>
 </html>

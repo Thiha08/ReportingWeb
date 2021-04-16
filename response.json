@@ -1,0 +1,333 @@
+﻿{
+  "pageItems": [
+    {
+      "id": 1,
+      "accountNo": "0019-5848-0001",
+      "externalId": "0019-5848-0001",
+      "status": {
+        "id": 300,
+        "code": "clientStatusType.active",
+        "value": "Active"
+      },
+      "subStatus": {
+        "active": false,
+        "isDefault": false
+      },
+      "active": true,
+      "activationDate": [
+        2006,
+        9,
+        22
+      ],
+      "firstname": "Christina",
+      "lastname": "ခရစ္စတီးနာ",
+      "displayName": "Christina ခရစ္စတီးနာ",
+      "mobileNo": "09773786297",
+      "dateOfBirth": [
+        1966,
+        3,
+        31
+      ],
+      "gender": {
+        "id": 219,
+        "name": "Female",
+        "active": true,
+        "isDefault": false
+      },
+      "clientType": {
+        "active": false,
+        "isDefault": false
+      },
+      "clientClassification": {
+        "active": false,
+        "isDefault": false
+      },
+      "officeId": 19,
+      "officeName": "BR: Loikaw - လွိုင်ကော်",
+      "staffId": 5856,
+      "staffName": "တင်နု Tin Nu",
+      "timeline": {
+        "submittedOnDate": [
+          2006,
+          9,
+          22
+        ],
+        "submittedByUsername": "musoni",
+        "submittedByFirstname": "App",
+        "submittedByLastname": "Administrator",
+        "activatedOnDate": [
+          2006,
+          9,
+          22
+        ],
+        "activatedByUsername": "musoni",
+        "activatedByFirstname": "App",
+        "activatedByLastname": "Administrator"
+      },
+      "groups": [
+        {
+          "id": 54742,
+          "accountNo": "0019-5848-54742",
+          "name": "KyawSoeWin89088",
+          "externalId": "MMLK-000990"
+        }
+      ],
+      "clientNonPersonDetails": {
+        "constitution": {
+          "active": false,
+          "isDefault": false
+        },
+        "mainBusinessLine": {
+          "active": false,
+          "isDefault": false
+        }
+      },
+      "isStaff": false,
+      "countryIsoCode": "MM",
+      "tags": []
+    },
+    {
+      "id": 2,
+      "accountNo": "0053-5657-0002",
+      "externalId": "MMBL-001123",
+      "status": {
+        "id": 300,
+        "code": "clientStatusType.active",
+        "value": "Active"
+      },
+      "subStatus": {
+        "active": false,
+        "isDefault": false
+      },
+      "active": true,
+      "activationDate": [
+        2007,
+        12,
+        8
+      ],
+      "firstname": "Kyaw Ohn",
+      "lastname": "ကျော်အုန်း",
+      "displayName": "Kyaw Ohn ကျော်အုန်း",
+      "mobileNo": "09255714932",
+      "dateOfBirth": [
+        1950,
+        5,
+        3
+      ],
+      "gender": {
+        "id": 12054,
+        "name": "Male",
+        "active": true,
+        "isDefault": false
+      },
+      "clientType": {
+        "active": false,
+        "isDefault": false
+      },
+      "clientClassification": {
+        "active": false,
+        "isDefault": false
+      },
+      "officeId": 53,
+      "officeName": "BR: Bilin - ဘီးလင်း",
+      "staffId": 5657,
+      "staffName": "စောအဲ့သာဆဲ Saw Eh Tha Hser",
+      "timeline": {
+        "submittedOnDate": [
+          2007,
+          12,
+          8
+        ],
+        "submittedByUsername": "musoni",
+        "submittedByFirstname": "App",
+        "submittedByLastname": "Administrator",
+        "activatedOnDate": [
+          2007,
+          12,
+          8
+        ],
+        "activatedByUsername": "musoni",
+        "activatedByFirstname": "App",
+        "activatedByLastname": "Administrator"
+      },
+      "mobileNoSecondary": "",
+      "groups": [
+        {}
+      ],
+      "clientNonPersonDetails": {
+        "constitution": {
+          "active": false,
+          "isDefault": false
+        },
+        "mainBusinessLine": {
+          "active": false,
+          "isDefault": false
+        }
+      },
+      "isStaff": false,
+      "countryIsoCode": "MM",
+      "tags": []
+    },
+    {
+      "id": 3,
+      "accountNo": "0053-5657-0003",
+      "externalId": "MMBL-001124",
+      "status": {
+        "id": 300,
+        "code": "clientStatusType.active",
+        "value": "Active"
+      },
+      "subStatus": {
+        "active": false,
+        "isDefault": false
+      },
+      "active": true,
+      "activationDate": [
+        2007,
+        12,
+        8
+      ],
+      "firstname": "Than Tun",
+      "lastname": "သန်းထွန်း",
+      "displayName": "Than Tun သန်းထွန်း",
+      "mobileNo": "094458069387",
+      "dateOfBirth": [
+        1964,
+        10,
+        15
+      ],
+      "gender": {
+        "id": 12054,
+        "name": "Male",
+        "active": true,
+        "isDefault": false
+      },
+      "clientType": {
+        "active": false,
+        "isDefault": false
+      },
+      "clientClassification": {
+        "active": false,
+        "isDefault": false
+      },
+      "officeId": 53,
+      "officeName": "BR: Bilin - ဘီးလင်း",
+      "staffId": 5657,
+      "staffName": "စောအဲ့သာဆဲ Saw Eh Tha Hser",
+      "timeline": {
+        "submittedOnDate": [
+          2007,
+          12,
+          8
+        ],
+        "submittedByUsername": "musoni",
+        "submittedByFirstname": "App",
+        "submittedByLastname": "Administrator",
+        "activatedOnDate": [
+          2007,
+          12,
+          8
+        ],
+        "activatedByUsername": "musoni",
+        "activatedByFirstname": "App",
+        "activatedByLastname": "Administrator"
+      },
+      "groups": [
+        {}
+      ],
+      "clientNonPersonDetails": {
+        "constitution": {
+          "active": false,
+          "isDefault": false
+        },
+        "mainBusinessLine": {
+          "active": false,
+          "isDefault": false
+        }
+      },
+      "isStaff": false,
+      "countryIsoCode": "MM",
+      "tags": []
+    },
+    {
+      "id": 4,
+      "accountNo": "0053-5657-0004",
+      "externalId": "0053-5657-0004",
+      "status": {
+        "id": 300,
+        "code": "clientStatusType.active",
+        "value": "Active"
+      },
+      "subStatus": {
+        "active": false,
+        "isDefault": false
+      },
+      "active": true,
+      "activationDate": [
+        2007,
+        12,
+        8
+      ],
+      "firstname": "Moe Win",
+      "lastname": "မိုးဝင်း",
+      "displayName": "Moe Win မိုးဝင်း",
+      "dateOfBirth": [
+        1979,
+        2,
+        21
+      ],
+      "gender": {
+        "id": 219,
+        "name": "Female",
+        "active": true,
+        "isDefault": false
+      },
+      "clientType": {
+        "active": false,
+        "isDefault": false
+      },
+      "clientClassification": {
+        "active": false,
+        "isDefault": false
+      },
+      "officeId": 53,
+      "officeName": "BR: Bilin - ဘီးလင်း",
+      "staffId": 5657,
+      "staffName": "စောအဲ့သာဆဲ Saw Eh Tha Hser",
+      "timeline": {
+        "submittedOnDate": [
+          2007,
+          12,
+          8
+        ],
+        "submittedByUsername": "musoni",
+        "submittedByFirstname": "App",
+        "submittedByLastname": "Administrator",
+        "activatedOnDate": [
+          2007,
+          12,
+          8
+        ],
+        "activatedByUsername": "musoni",
+        "activatedByFirstname": "App",
+        "activatedByLastname": "Administrator"
+      },
+      "groups": [
+        {}
+      ],
+      "clientNonPersonDetails": {
+        "constitution": {
+          "active": false,
+          "isDefault": false
+        },
+        "mainBusinessLine": {
+          "active": false,
+          "isDefault": false
+        }
+      },
+      "isStaff": false,
+      "countryIsoCode": "MM",
+      "tags": []
+    }
+  ]
+}
