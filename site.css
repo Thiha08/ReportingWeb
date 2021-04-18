@@ -28,3 +28,11 @@ h1 button { float: right; }
 .btn {
     border-radius: 0;
 }
+
+.file-upload {
+  margin-bottom: 0;
+  
+}
+.file-upload input[type='file'] {
+  display: none;
+}
