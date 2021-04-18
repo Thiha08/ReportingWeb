@@ -158,6 +158,25 @@ new Vue({
           vm.fetchError = true;
         });
     },
+    fetchUsersByFileUpload: function () {
+      var vm = this;
+      vm.users = [];
+      vm.fetchError = false;
+
+      var files = document.getElementById('fileUpload').files;
+      if (files.length <= 0) {
+        return false;
+      }
+      var fr = new FileReader();
+      fr.onload = e => {
+        var json = JSON.parse(e.target.result);
+        vm.users = _.map(json.pageItems, function (user) {
+          return serializeUser(user);
+        });
+      }
+      fr.readAsText(files.item(0));
+      document.getElementById("fileUpload").value = "";
+    },
     getField: function (object, field) {
       return _.at(object, field)[0];
     },
@@ -219,25 +238,24 @@ new Vue({
         html: "#usertable",
         theme: "grid",
         didParseCell: function (table) {
-          if (table.section === 'head') {
-            table.settings.showHead="firstPage";
-            table.cell.styles.textColor  = '#000000';
-            table.cell.styles.fontSize = '12';
-            table.cell.styles.font  = 'Padauk';
-            table.cell.styles.fontStyle  = 'bold';
-            table.cell.styles.halign ='center';
-            table.cell.styles.valign ='middle';
-            table.cell.styles.fillColor ='#fff';
+          if (table.section === "head") {
+            table.settings.showHead = "firstPage";
+            table.cell.styles.textColor = "#000000";
+            table.cell.styles.fontSize = "12";
+            table.cell.styles.font = "Padauk";
+            table.cell.styles.fontStyle = "bold";
+            table.cell.styles.halign = "center";
+            table.cell.styles.valign = "middle";
+            table.cell.styles.fillColor = "#fff";
             table.cell.styles.lineColor = 234;
             table.cell.styles.lineWidth = 1;
-          }
-          else {
-            if(table.section === 'body'){
-              table.cell.styles.fontSize = '10';
-              table.cell.styles.textColor  = '#000000'; 
-              table.cell.styles.font  = 'Padauk'; 
-              table.cell.styles.halign ='right';
-              table.cell.styles.valign ='bottom';
+          } else {
+            if (table.section === "body") {
+              table.cell.styles.fontSize = "10";
+              table.cell.styles.textColor = "#000000";
+              table.cell.styles.font = "Padauk";
+              table.cell.styles.halign = "right";
+              table.cell.styles.valign = "bottom";
               table.cell.styles.lineColor = 234;
               table.cell.styles.lineWidth = 1;
             }
@@ -291,14 +309,5 @@ function serializeUser(input) {
   output.countryIsoCode = input.countryIsoCode;
 
   return output;
-}
-
-function getBase64(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = error => reject(error);
-  });
 }
 
